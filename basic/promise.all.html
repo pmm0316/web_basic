@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Promise.all方法，里面promise对象都要返回resolve，
+        reject时会报错
+    -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        let p1 = Promise.resolve('a')
+        let p2 = Promise.resolve('b')
+        let p3 = Promise.resolve('c')
+
+        Promise.all([p1, p2, p3]).then(res => {
+          console.log(res)
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

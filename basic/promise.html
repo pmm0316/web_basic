@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        let a = 10
+        let promise = new Promise((resolve, reject) => {
+          if (a > 9) {
+            resolve('success')
+          } else {
+            reject('fail')
+          }
+        })
+
+        promise.then(res => {
+          console.log(res)
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

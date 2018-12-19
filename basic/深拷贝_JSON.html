@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深拷贝</title>
+    <script>
+        let a1 = [
+          {
+            title: '标题1',
+            color: 'red'
+          },
+          {
+            title: '标题2',
+            color: 'blue'
+          }
+        ]
+        let b1 = JSON.parse(JSON.stringify(a1))
+        b1[0].color = 'pink'
+        console.log(a1)
+        console.log(b1)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

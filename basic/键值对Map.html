@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let obj = {
+          name: 'aaa'
+        }
+        let map = new Map()
+        map.set('a', 1)
+        map.set(obj, 2) // 设置值
+        console.log(map)
+        console.log(map.get(obj)) // 取值
+        for (let item of map) {
+          console.log(item)
+        }
+        for(let key of map.keys()) {
+          console.log(key)
+        }
+        for(let value of map.values()) {
+          console.log(value)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

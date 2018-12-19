@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        疯狂的循环
+        map, filter, some, every, reduce, reduceRight, find, findIndex
+    -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        console.warn('----forEach----')
+        let a1 = ['hello', 'world']
+        let b1 = a1.forEach((item, i, arr) => {
+          console.log(item, i, arr)
+        })
+        console.log(b1) // undefined
+        console.warn('----map----')
+        let a2 = [1, 2, 3]
+        let b2 = a2.map(v => {
+          return v * 2
+        })
+        console.log(a2) // [1, 2, 3]
+        console.log(b2) // [2, 4, 6]
+        console.warn('----filter----')
+        let a3 = [
+          {
+            title: '标题1',
+            show: true
+          },
+          {
+            title:'标题2',
+            show: false
+          },
+          {
+            title:'标题3',
+            show: true
+          }
+        ]
+        let b3 = a3.filter(item => {
+          return item.show
+        })
+        console.log(a3)
+        console.log(b3)
+        console.warn('----some----')
+        let a4 = ['yellow', 'red', 'blue']
+        let b4 = a4.some(v => {
+          return v === 'red2'
+        })
+        console.log(b4) // true
+        console.warn('----every----')
+        let a5 = [2, 4, 6, 8]
+        let b5 = a5.every(v => {
+          return v % 2 === 0
+        })
+        console.log(b5) // true
+        console.warn('----reduce----')
+        let a6 = [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10]
+        /**
+         * preTotal：之前值的和
+         * currentValue: 当前值
+         */
+        let b6 = a6.reduce((preTotal, currentValue) => {
+          console.log(currentValue) /*1, 2 ... 7, 8, 9*/
+          return preTotal + currentValue
+        })
+        console.log(b6) // 55
+        let b7 = a6.reduceRight((preTotal, currentValue) => {
+          console.log(currentValue) /*9, 8, 7 ... 2, 1**/
+          return preTotal + currentValue
+        })
+        console.log(b7) //55
+        console.warn('----find----')
+        let a8 = [
+          {
+            name: 'Tom',
+            age: 18
+          },
+          {
+            name: 'Anny',
+            age: 15
+          },
+          {
+            name: 'Kobe',
+            age: 22
+          },
+        ]
+        let b8 = a8.find((item) => {
+          return item.age > 15
+        })
+        console.log(b8) // {name: 'Tom', age: 18}
+        console.warn('----findIndex----')
+        let a9 = ['webpack', 'node', 'vue']
+        let b9 = a9.findIndex(v => {
+          return v === 'node'
+        })
+        console.log(b9) // 1
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

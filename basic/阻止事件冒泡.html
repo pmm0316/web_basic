@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-
+        1.垂直居中。
+        2.点击容器内的图标，图标边框变成border：1px solid red,
+        点击空白处重置。
+    -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            height: calc(100vh);
+            background-color: #123456;
+            /*position: relative;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 200px;
+            height: 120px;
+            background-color: yellowgreen;
+            border: 1px solid #ccc;
+            /*position: absolute;*/
+            /*top: 50%;*/
+            /*left: 50%;*/
+            /*transform: translate(-50%, -50%);*/
+        }
+    </style>
+    <script>
+        window.onload = function () {
+          clickContainer()
+          clickBox()
+        }
+        function clickContainer () {
+          let box = document.getElementById('box')
+          let container = document.getElementById('container')
+          container.onclick = function () {
+            box.style.borderColor = '#ccc'
+          }
+        }
+        function clickBox () {
+          let box = document.getElementById('box')
+          box.onclick = function (e) {
+            e.stopPropagation() // 阻止事件冒泡
+            e.target.style.borderColor = 'red'
+          }
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="box" id="box"></div>
+    </div>
+</body>
+</html>

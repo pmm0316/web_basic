@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      let a1 = ['hello', '2018']
+      let b1 = Object.assign([], a1)
+      // 改变b1中的值
+      b1[0] = 'hi'
+      /**
+       * 输出结果发现
+       * 改变b1数据
+       * a1数组没有改变，b1数组改变
+       */
+      console.log(a1) // ['hello', '2018']
+      console.log(b1) // ['hi', '2018']
+      let a2 = [
+        {
+          name: 'java',
+          count: 12
+        },
+        {
+          name: 'js',
+          count: 13
+        }
+      ]
+      let b2 = Object.assign([], a2)
+      // 改变b2数组中其中对象的count值
+      b2[0].count = 111
+      /**
+       * 输出结果发现
+       * 改变了b2数据
+       * a1，b1数组都发生了改变
+       */
+      console.log(a2)
+      console.log(b2)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

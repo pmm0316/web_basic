@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let obj = {
+          name: 'Anny',
+          age: 14,
+          address: '宁波市'
+        }
+        for (let key in obj) {
+          if (key === 'age') {
+            break
+          }
+          console.log(key)
+        }
+        console.warn('-------')
+        for (let key in obj) {
+          if (key === 'age') {
+            continue
+          }
+          console.log(key)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

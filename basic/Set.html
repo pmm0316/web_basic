@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let set = new Set(['a', 'b', 'c'])
+        console.log(set)
+        for(let item of set) { // 默认是set.values()
+          console.log(item)
+        }
+        set.add('d') // 末尾添加元素
+        console.log(set)
+        set.delete('a') // 删除指定的元素
+        console.log(set)
+        console.log(set.size) // set的长度
+        set.clear() // 清空set
+        console.log(set)
+        // 应用：数组去重
+        console.log('---------')
+        let arr = [1, 2, 3, 4, 2, 3, 5, 7, 10, 6, 8, 4]
+        let newArr1 = Array.from(new Set(arr))
+        let newArr2 = [...new Set(arr)]
+        console.log(newArr1)
+        console.log(newArr2)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

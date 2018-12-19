@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let a = 3.5
+        console.log(Math.round(a)) // 2 四舍五入
+        console.log(Math.trunc(a)) // 1 截取。保留整数部分
+        let b1 = 100
+        let b2 = -82
+        let b3 = 0
+        /**
+         * Math.sign用法
+         * 大于0的数(正数)都返回1
+         * 小于0的数(负数)都返回-1
+         * 为0时，返回0
+         */
+        console.log(Math.sign(b1)) // 1
+        console.log(Math.sign(b2)) // -1
+        console.log(Math.sign(b3)) // 0
+        console.log(Math.sign(-0)) // -0
+        console.log(Math.sign(+0)) // 0
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 类
+        class Person {
+          constructor(name='geely') {
+            this.name = name
+          }
+          sleep() {
+            return `${this.name} need sleep`
+          }
+        }
+        let p1 = new Person('Anny')
+        console.log(p1.name)
+        console.log(p1.sleep())
+
+        // 继承
+        class Child extends Person {
+          constructor(age) {
+            super() // 调用父类的构造方法
+            this.age = age
+          }
+          info() {
+            return `name: ${this.name}, age: ${this.age}`
+          }
+        }
+        let c1 = new Child(18)
+        console.log(c1.sleep())
+        console.log(c1.info())
+    </script>
+</head>
+<body>
+
+</body>
+</html>
