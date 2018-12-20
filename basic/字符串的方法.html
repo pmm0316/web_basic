@@ -10,6 +10,8 @@
         let padStr = 'aaa'
         console.log(str.padStart(str.length + padStr.length, padStr))
         console.log(str.padEnd(str.length + padStr.length, padStr))
+        console.log(str.search(/\s{2}/)) // 可以传入正则，匹配成功返回相应的index，不成功返回-1
+        console.log(str.replace(/w/, 'W')) // 可以传入正则，匹配成功返回相应的index，不成功返回-1
     </script>
 </head>
 <body>
