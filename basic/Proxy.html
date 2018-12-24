@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Proxy代理
+    -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let obj = {
+          name: 'obj'
+        }
+        let handler = {
+          get(target, property) {
+            // property in target 判断属性是否存在
+            return property in target ? target[property] : null
+          },
+          set(target, property, value) {
+            console.log(`${property}属性被设置为${value}`)
+            target[property] = value
+          }
+        }
+        let p = new Proxy(obj, handler)
+        console.log(p)
+        p.name = 'newName'
+        p.age = 11
+        console.log(Object.assign({}, p))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
