@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      /**
+       * 把字符串转成Date类型
+       * @param dateStr
+       * 2018/12/11 10:11:30
+       * 2018-12-12 10:12:30
+       * 2018.12.12 10:13:30
+       * @returns {Date}
+       */
+      function string2Date(dateStr) {
+        return new Date(Date.parse(dateStr))
+      }
+      console.log(string2Date('2018/12/11 10:10:30'))
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
